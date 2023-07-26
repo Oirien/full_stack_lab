@@ -1,0 +1,11 @@
+{% extends "base.jinja" %}
+{% block content %}
+{% for project in projects %}
+    <ul>
+        <li>{{ project.project_title }}</li>
+        <li>{{ project.description }}</li>
+        <li>{{ project.due_date }}</li>
+        <a href="/projects/{{project.id}}">See more detail.</a>
+    </ul>
+{% endfor %}
+{% endblock %}

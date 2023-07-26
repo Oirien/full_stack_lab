@@ -1,0 +1,26 @@
+{% extends "base.jinja" %}
+{% block content %}
+<div class="form_container">
+    <form action="/projects" method="post">
+    <div>
+        <label for ="project_title">Project Title</label>
+        <input type="text" id="project_title" name="project_title" required>
+    </div>
+    <div>
+        <label for ="description">Description</label>
+        <input type="text" id="description" name="description" required>
+    </div>
+    <div>
+        <label for ="due_date">Due Date</label>
+        <input type="date" id="due_date" name="due_date" required>
+    </div>
+    <div>
+        <label for ="completed">Completed :</label>
+        <input type="checkbox" id="completed" name="completed">
+    </div>
+    <div>
+        <button type="submit">Add Project</button>
+    </div>
+    </form>
+</div>
+{% endblock %}
